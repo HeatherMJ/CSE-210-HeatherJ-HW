@@ -1,0 +1,19 @@
+What is abstraction and why is it important?
+Your response must:
+
+Explain the meaning of Abstraction: 
+The purpose of abstraction is to take difficult/complex concepts and produce simplier
+code. Abstraction also creates well structured code and also increases the security of 
+the program becaue it will only giving the most important details to the user. 
+Highlight a benefit of Abstraction:
+
+Abstraction allows reusing code in muliple areas by using different classes.
+
+Provide an application of Abstraction:
+An example of application of Abstraction would be by creating a higher order of 
+code, this will allow classes to share with others.
+
+Use a code example of Abstraction from the program you wrote:
+
+Thoroughly explain these concepts (this likely cannot be done in less than 100 words)
+
