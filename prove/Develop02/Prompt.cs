@@ -6,7 +6,7 @@ public class Prompt
     private List<string> prompts;
     private Random random;
    
-    public Prompt()
+   private Prompt()
     {
         prompts = new List<string>();
         InitializePrompts();
