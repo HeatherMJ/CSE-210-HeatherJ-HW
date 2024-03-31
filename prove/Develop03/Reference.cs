@@ -1,18 +1,15 @@
-ppublic class Reference
-{
-    //Get the text displyed of the reference
-    public string GetDisplayText();
+public class Reference
     {
+        private string _reference;
 
+        public Reference(string reference)
+        {
+            _reference = reference;
+        }
+
+        public string GetReference()
+        {
+            return _reference;
+        }
     }
-
-    public string _book {get; set;}
-
-    public int _chapter {get; set;}
-
-    public int _verse {get; set;}
-
-    public int _endVerse {get; set;}
-}
-}
 

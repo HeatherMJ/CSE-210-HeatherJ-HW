@@ -1,25 +1,41 @@
 using System;
-using System.Dynamic;
-using System.Collections.Generic;
+
 public class Scripture
-{
-    // This is how to hide a specified number of random words in the scripture
-    public void HideRandomWord(int numberToHide);
     {
+        private Reference _reference;
+        private List<Word> _words = new List<Word>();
 
+        public Scripture(string reference, string text)
+        {
+            _reference = new Reference(reference);
+
+            string[] parts = text.Split(" ");
+            foreach (string part in parts)
+            {
+                Word newWord = new Word(part);
+                _words.Add(newWord);
+            }
+        }
+
+        public void Display()
+        {
+            Console.WriteLine($"Scripture Reference: {_reference.GetReference()}");
+
+            foreach (Word word in _words)
+            {
+                word.DisplayWord();
+            }
+        }
+
+        public void HideRandomWord()
+        {
+            Random rnd = new Random();
+            int randomIndex = rnd.Next(_words.Count);
+            _words[randomIndex].HideWord();
+        }
+
+        public bool AllWordsHidden()
+        {
+            return _words.All(word => word.IsHidden());
+        }
     }
-    // How to get the display of word of the scripture, with some of the words hidden
-    public string GetDisplayText();
-    {
-
-    }
-    //How to check if the scripture is totally hiddden 
-    public bool IsCompletelyHidden();
-    {
-
-    }
-
-    public string _reference {get; set;}
-
-    public List<Word> _words {get; set;}
-}

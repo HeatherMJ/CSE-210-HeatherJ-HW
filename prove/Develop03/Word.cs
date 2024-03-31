@@ -1,32 +1,32 @@
 
 using System;
+
 public class Word
 {
-    //Hide the word
-    public void Hide()
-    {
+    private string _text;
+    private bool _isHidden;
 
-    }
-    // Show the word
-    public void Show();
+    public Word(string text)
     {
-
-    }
-    //Check if the word is hidden
-    public bool IsHidden();
-    {
-
-    }
-    // Get the text displayed of the word, or underscore
-    public string GetSDisplayText();
-    {
-
+        _text = text;
+         _isHidden = false;
     }
 
-    public string _text {get; set;}
+     public void DisplayWord()
+    {
+        if (_isHidden)
+            Console.Write("___ ");
+        else
+            Console.Write(_text + " ");
+    }
 
-    public bool _isHidden {get; set;}
+    public void HideWord()
+    {
+         _isHidden = true;
+    }
+
+    public bool IsHidden()
+    {
+        return _isHidden;
+    }
 }
-
-
-
