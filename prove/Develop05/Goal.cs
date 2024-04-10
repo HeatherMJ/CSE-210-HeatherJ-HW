@@ -1,16 +1,29 @@
 using System.IO; 
-public abstract class Goal
+using System;
+
+namespace Develop05
 {
-    private string _shortName;
-    private string _descriptions;
-    private int _points;
-    public Goal(string name, string description, int points)
+    public abstract class Goal
     {
-        _shortName = name;
-        _descriptions = description;
-        _points = points;
+        public string _shortName;
+        public string _description;
+        public int _points;
+
+        public Goal(string name, string description, int points)
+        {
+            _shortName = name;
+            _description = description;
+            _points = points;
+        }
+
+        public abstract void RecordEvent();
+        public abstract bool IsComplete(); 
+        
+        public abstract string GetStringRepresentation();
+
+        internal string GetStringRepresentation(object saveToFile)
+        {
+            throw new NotImplementedException();
+        }
     }
-    public abstract void RecordEvent();
-    public abstract bool ISComplete();
-    public abstract string GetStringRepresentation();
 }
