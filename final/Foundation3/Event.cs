@@ -33,5 +33,10 @@ namespace OutdoorEvent
         {
             return GetStandardDetails();
         }
+
+        public virtual string GetShortDetails()
+        {
+            return $"{GetType().Name}: {_title} - {_date.ToShortDateString()}";
+        }
     }
 }
